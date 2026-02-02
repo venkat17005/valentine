@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Be My Valentine ❤️</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ff6b9c;
+font-family:Arial;
+overflow:hidden;
+color:white;
+}
+
+.box{
+text-align:center;
+position:relative;
+}
+
+h1{
+margin-bottom:40px;
+}
+
+/* PERFECT SVG HEART */
+.svg-heart{
+width:150px;
+cursor:pointer;
+animation:beat 1s infinite;
+position:relative;
+margin:auto;
+}
+
+.svg-heart svg{
+width:100%;
+fill:red;
+}
+
+.svg-heart span{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:24px;
+font-weight:bold;
+color:white;
+}
+
+/* NO BUTTON */
+#no{
+position:absolute;
+left:-160px;
+top:180px;
+padding:12px 28px;
+background:black;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* MESSAGE */
+#msg{
+display:none;
+font-size:26px;
+margin-top:40px;
+}
+
+@keyframes beat{
+50%{transform:scale(1.1);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Will You Be My Valentine ❤️</h1>
+
+<div class="svg-heart" onclick="yes()">
+
+<svg viewBox="0 0 32 29.6">
+<path d="M23.6,0c-3.4,0-6.4,2-7.6,4.9C14.8,2,11.8,0,8.4,0
+C3.8,0,0,3.8,0,8.4c0,9.4,16,21.2,16,21.2s16-11.8,16-21.2
+C32,3.8,28.2,0,23.6,0z"/>
+</svg>
+
+<span>YES</span>
+
+</div>
+
+<div id="no">NO</div>
+
+<div id="msg">
+I know sweetheart ❤️ you love me so much<br>
+and I love you soooo much 💕
+</div>
+
+</div>
+
+<script>
+
+let no=document.getElementById("no");
+
+no.onmouseover=function(){
+no.style.left=Math.random()*400+"px";
+no.style.top=Math.random()*300+"px";
+}
+
+function yes(){
+document.getElementById("msg").style.display="block";
+alert("I knew it 😍");
+}
+
+</script>
+
+</body>
+</html>
